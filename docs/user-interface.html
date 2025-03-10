@@ -1,0 +1,100 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html lang="en-US" data-preset="contrast" data-primary-color="#D03042" data-resizable-sidebar="false"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta charset="UTF-8"><meta name="robots" content="noindex"><meta name="built-on" content="2025-03-10T14:45:10.525691"><!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8YKCVR45PQ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-8YKCVR45PQ');
+</script><title>User Interface | Unity Prototyping</title><script type="application/json" id="virtual-toc-data">[{"id":"designing-the-ui","level":0,"title":"Designing the UI","anchor":"#designing-the-ui"},{"id":"start-screen","level":0,"title":"Start Screen","anchor":"#start-screen"},{"id":"heads-up-display","level":0,"title":"Heads Up Display","anchor":"#heads-up-display"},{"id":"win-and-lose-screens","level":0,"title":"Win and Lose Screens","anchor":"#win-and-lose-screens"}]</script><script type="application/json" id="topic-shortcuts"></script><link href="https://resources.jetbrains.com/writerside/apidoc/6.10.0-b575/app.css" rel="stylesheet"><meta name="msapplication-TileColor" content="#000000"><link rel="apple-touch-icon" sizes="180x180" href="https://jetbrains.com/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="https://jetbrains.com/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="https://jetbrains.com/favicon-16x16.png"><meta name="msapplication-TileImage" content="https://resources.jetbrains.com/storage/ui/favicons/mstile-144x144.png"><meta name="msapplication-square70x70logo" content="https://resources.jetbrains.com/storage/ui/favicons/mstile-70x70.png"><meta name="msapplication-square150x150logo" content="https://resources.jetbrains.com/storage/ui/favicons/mstile-150x150.png"><meta name="msapplication-wide310x150logo" content="https://resources.jetbrains.com/storage/ui/favicons/mstile-310x150.png"><meta name="msapplication-square310x310logo" content="https://resources.jetbrains.com/storage/ui/favicons/mstile-310x310.png"><meta name="image" content=""><!-- Open Graph --><meta property="og:title" content="User Interface | Unity Prototyping"><meta property="og:description" content=""><meta property="og:image" content=""><meta property="og:site_name" content="Unity Prototyping Help"><meta property="og:type" content="website"><meta property="og:locale" content="en_US"><meta property="og:url" content="writerside-documentation/user-interface.html"><!-- End Open Graph --><!-- Twitter Card --><meta name="twitter:card" content="summary_large_image"><meta name="twitter:site" content=""><meta name="twitter:title" content="User Interface | Unity Prototyping"><meta name="twitter:description" content=""><meta name="twitter:creator" content=""><meta name="twitter:image:src" content=""><!-- End Twitter Card --><!-- Schema.org WebPage --><script type="application/ld+json">{
+    "@context": "http://schema.org",
+    "@type": "WebPage",
+    "@id": "writerside-documentation/user-interface.html#webpage",
+    "url": "writerside-documentation/user-interface.html",
+    "name": "User Interface | Unity Prototyping",
+    "description": "",
+    "image": "",
+    "inLanguage":"en-US"
+}</script><!-- End Schema.org --><!-- Schema.org WebSite --><script type="application/ld+json">{
+    "@type": "WebSite",
+    "@id": "writerside-documentation/#website",
+    "url": "writerside-documentation/",
+    "name": "Unity Prototyping Help"
+}</script><!-- End Schema.org --></head><body data-id="User-Interface" data-main-title="User Interface" data-article-props="{&quot;seeAlsoStyle&quot;:&quot;links&quot;}" data-template="article" data-breadcrumbs=""><div class="wrapper"><main class="panel _main"><header class="panel__header"><div class="container"><h3>Unity Prototyping  Help</h3><div class="panel-trigger"></div></div></header><section class="panel__content"><div class="container"><article class="article" data-shortcut-switcher="inactive"><h1 data-toc="User-Interface" id="User-Interface.md">User Interface</h1><section class="chapter"><h2 id="designing-the-ui" data-toc="designing-the-ui">Designing the UI</h2><p id="jrrsqw_7">We need to ask ourselves what does the player need to know, and this will tell us the UI Elements that we need to implement.</p><p id="jrrsqw_8">A very basic example:</p><ul class="list _bullet" id="jrrsqw_9"><li class="list__item" id="jrrsqw_12"><p>Buttons to start and quit</p></li><li class="list__item" id="jrrsqw_13"><p>Display collectible collected</p></li><li class="list__item" id="jrrsqw_14"><p>Tell the player if he won or lost </p><ul class="list _bullet" id="jrrsqw_15"><li class="list__item" id="jrrsqw_16"><p>Buttons to restart or quit</p></li></ul></li></ul><p id="jrrsqw_10">It's also very helpful know how does the user move between screens. For it, we need to draw a flow diagram.</p><figure id="jrrsqw_11"><img alt="Prototyping14" src="images/prototyping14.jpg" title="Prototyping14" width="1920" height="620"></figure></section><section class="chapter"><h2 id="start-screen" data-toc="start-screen">Start Screen</h2><p id="jrrsqw_17">The first thing to do is create a new Scene, then select the Camera GameObject in the Hierarchy, and in the Inspector, change the Clear Flags property to Solid Color, and select a Background color.</p><p id="jrrsqw_18">The next is create a Canvas, go to Component &gt; UI &gt; Canvas.</p><p id="jrrsqw_19">The Canvas is the way that Unity handle all UI elements. Its size is set by the &quot;Aspect Ratio&quot; property on the Game window.</p><p id="jrrsqw_20">Change the UI Scale Mode of the Canvas Scaler component to &quot;Scale with Screen Size&quot;, to allows the Canvas to adapt to any screen size. Also it's a good idea set the &quot;Reference Resolution&quot;.</p><p id="jrrsqw_21">To add text to the Canvas, go to GameObject &gt; UI &gt; Text. You'll need to adapt it to the screen by scaling the font size and the GameObject width and height.</p><p id="jrrsqw_22">The Canvas can adjust the position of the UI elements when the screen size changes, by using the anchor and pivot points of each UI element.</p><p id="jrrsqw_23">The anchor points allow us to keep the UI element to a relative distance from where they are set.</p><figure data-theme="light" id="jrrsqw_24" width="550"><img alt="Prototyping15" class="js-gif article__bordered-element" data-gif-src="images/prototyping15.gif" width="550" style="width: 550px;"></figure><p id="jrrsqw_25">The pivot point is the axis of the object to make rotations</p><figure id="jrrsqw_26"><img alt="Prototyping16" src="images/prototyping16.jpg" title="Prototyping16" width="500" height="290"></figure><p id="jrrsqw_27">Having this in mind, create two buttons, one to load a Scene and other to exit the game.</p><p id="jrrsqw_28">Create an empty GameObject with a Script component with the following lines:</p><div class="code-block" data-lang="csharp">
+using UnityEngine.SceneManagement;
+
+public void LaunchGame() {
+    SceneManager.LoadScene(1);
+}
+
+public void QuitGame() {
+    Application.Quit();
+}
+</div><p id="jrrsqw_30">Then set that GameObject to the OnClick function of each button, selecting the appropriate function.</p><p id="jrrsqw_31">With the first button, we'll load the second Scene selected in the Build Settings, and with the second button, we can leave the game.</p></section><section class="chapter"><h2 id="heads-up-display" data-toc="heads-up-display">Heads Up Display</h2><p id="jrrsqw_32">We are going to create a heds up display to show to the player the current ammount of gold and keys. To do it, we need to:</p><ol class="list _decimal" id="jrrsqw_33" type="1"><li class="list__item" id="jrrsqw_38"><p>Create a Canvas and set the <code class="code" id="jrrsqw_41">UI Scale Mode</code> to <code class="code" id="jrrsqw_42">Scale With Screen Size</code>, am adequate resolution (i.e. 1920x1080). and the <code class="code" id="jrrsqw_43">Match</code> to 0.5.</p></li><li class="list__item" id="jrrsqw_39"><p>Add a Text, to display the gold counter, set the text, adjust the size and set the pivot and the position at the top left corner</p></li><li class="list__item" id="jrrsqw_40"><p>Duplicate the previous Text, to use it for the key count.</p></li></ol><p id="jrrsqw_34">Then we need to edit the character collective Script to edit the texts of the two Text objects when a gold of key is collected.</p><div class="code-block" data-lang="csharp">
+using UnityEngine;
+using System.Collections;
+using UnityEngine.UI;
+
+public class Collection : MonoBehaviour {
+
+    public int gold;
+    private hasKey;
+
+    public Text goldCount;
+    public Text keysCount;
+
+    void OnTriggerEnter(Collider other) {
+        if (other.tag == &quot;Coin&quot;) {
+            Gold++;
+            goldCount.text = &quot;Gold: &quot; + gold;
+            Instantiate(Resources.Load(&quot;PickupEffect&quot;), other.transform.position, other.transform.rotation);
+            Destroy (other.gameObject);
+        }
+        If (other.tag == &quot;Key&quot;) {
+            hasKey = true;
+            keysCount.text = &quot;Keys: 1&quot;;
+            Instantiate(Resources.Load(&quot;PickupEffect&quot;), other.transform.position, other.transform.rotation);
+            Destroy (other.gameObject);
+        }
+        If (other.tag == &quot;Chest&quot;) {
+            Gold += 10;
+            goldCount.text = &quot;Gold: &quot; + gold;
+            keysCount.text = &quot;Keys: 0&quot;;
+            Instantiate(Resources.Load(&quot;PickupEffect&quot;), other.transform.position, other.transform.rotation);
+            Destroy (other.gameObject);
+            hasKey = false;
+        }
+    }
+}
+</div><p id="jrrsqw_36">Then attacht the two Texts to the script variables, selecting the Character object in the Hierarchy, and draw and drop the Texts to the variables in the Inspector.</p><figure id="jrrsqw_37"><img alt="Prototyping17" src="images/prototyping17.jpg" title="Prototyping17" width="400" height="111"></figure></section><section class="chapter"><h2 id="win-and-lose-screens" data-toc="win-and-lose-screens">Win and Lose Screens</h2><p id="jrrsqw_44">The final step is to add a pop-up making the player know if he won or loss.</p><p id="jrrsqw_45">We start with the win screen.</p><p id="jrrsqw_46">Add a panel to the previous Canvas and adjust its size to only cover a part of the screen. Set a background color or image and add a Outline, to differenciate it from the environment.</p><p id="jrrsqw_47">Add two Texts, one indicating that the player wins, and another for display the ammount of gold collected.</p><p id="jrrsqw_48">And two Buttons, one for restart the game and another for quit.</p><figure id="jrrsqw_49"><img alt="Prototyping18" src="images/prototyping18.jpg" title="Prototyping18" width="1200" height="700"></figure><p id="jrrsqw_50">At finish the win screen, duplicate it to make the lose screen, editing the Texts and the Buttons.</p><p id="jrrsqw_51">Then select the two panels in the Hierarchy, and disable them by clicking the checkbox of the Inspector.</p><figure id="jrrsqw_52"><img alt="Prototyping19" src="images/prototyping19.jpg" title="Prototyping19" width="400" height="145"></figure><p id="jrrsqw_53">We need to edit the script that handles the end of the game:</p><div class="code-block" data-lang="csharp">
+using UnityEngine;
+using System.Collections;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+
+public class Popup : MonoBehaviour {
+
+    public GameObject LosePopup;
+    public GameObject WinPopup;
+    public Text FinalGold;
+    
+    void OnTriggerEnter(Collider other) {
+        If (other.tag == &quot;Enemy&quot;) {
+            LosePopup.setActive(true);
+            // Freeze the game to disable movement
+            Cursor.visible = true;
+            Time.timeScale = 0;
+        }
+        If (other.tag == &quot;Goal&quot;) {
+            WinPopup.setActive(true);
+            FinalGold.text = &quot;You collected &quot; +
+                GetComponent&lt;Collection&gt;().gold +
+                &quot; gold!&quot;;
+            // Freeze the game to disable movement
+            Cursor.visible = true;
+            Time.timeScale = 0;
+        }
+    }
+}
+</div><p id="jrrsqw_55">After editing the script, we need to attacht the Panels and the gold Text to the script</p><p id="jrrsqw_56">And set the <code class="code" id="jrrsqw_57">LaunchGame()</code> and <code class="code" id="jrrsqw_58">QuitGame()</code> scripts to the buttons.</p></section><div class="last-modified">Last modified: 10 March 2025</div><div data-feedback-placeholder="true"></div><div class="navigation-links _bottom"><a href="scripted-interactions.html" class="navigation-links__prev">Scripted Interactions</a></div></article><div id="disqus_thread"></div></div></section></main></div><script src="https://resources.jetbrains.com/writerside/apidoc/6.10.0-b575/app.js"></script></body></html>

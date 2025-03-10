@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE instance-profile
+        SYSTEM "https://resources.jetbrains.com/writerside/1.0/product-profile.dtd">
+
+<instance-profile id="up"
+                 name="Unity Prototyping"
+                 start-page="Overview.md">
+
+    <toc-element topic="Overview.md"/>
+    <toc-element topic="Create-an-Environment.md"/>
+    <toc-element topic="Art-and-Sound-Integration.md"/>
+    <toc-element topic="Character-Controller.md"/>
+    <toc-element topic="Scripted-Interactions.md"/>
+    <toc-element topic="User-Interface.md"/>
+</instance-profile>
